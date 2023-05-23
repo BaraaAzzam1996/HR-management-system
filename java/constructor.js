@@ -6,8 +6,9 @@ function Management (id,name,departement,Level,img,salary){
    this. level=Level;
     this.image=img;
     this.Salary=salary;
-   
 }
+   
+
 function generateEmployeeId() {
     let employeeId;
     const usedIds = new Set();
@@ -42,15 +43,30 @@ let Safi =new Management(generateEmployeeId,"Safi Waleed","Administration","Mid-
  let Rana=new Management(generateEmployeeId,"Rana Saleh","Development","Junior","path/to/rana.jpg",calculateSalary("Junior"));
  let Hadi=new Management(generateEmployeeId,"Hadi Ahmad","Finance","Mid-Senior","path/to/hadi.jpg",calculateSalary("Midsenior"));
  let employees = [Ghazi, Lana, Tamara, Safi, omar, Rana, Hadi];
-function renderEmployees() {
-    let employeeList = "";
-    for (let i = 0; i < employees.length; i++) {
-      let employee = employees[i];
-      employeeList += "Employee name: " + employee.FullName + "<br>";
-      employeeList+="Departement:"+employee.Departement+"<br>";
-      employeeList += "Employee salary: " + employee.Salary + "<br><br>";
-    }
-    document.getElementById("employee-list").innerHTML = employeeList;
+ Management.prototype.renderEmployees=function()
+  {
+  let employeeList = "";
+  for (let i = 0; i < employees.length; i++) {
+    let employee = employees[i];
+    employeeList += "Employee name: " + employee.FullName + "<br>";
+    employeeList +="Departement:    "+employee.Departement+"<br>";
+    employeeList += "Employee salary: " + employee.Salary + "<br><br>";
   }
+  document.getElementById("employee-list").innerHTML = employeeList;
+}
+
+Management.prototype.renderEmployees.call(employees);
+
+
   
-  renderEmployees();
+
+
+ 
+ 
+
+ 
+
+
+   
+  
+  
