@@ -54,8 +54,16 @@ let Safi =new Management(generateEmployeeId,"Safi Waleed","Administration","Mid-
   }
   document.getElementById("employee-list").innerHTML = employeeList;
 }
+Ghazi.renderEmployees();
+Lana.renderEmployees();
+Tamara.renderEmployees();
+Safi.renderEmployees();
+omar.renderEmployees();
+Rana.renderEmployees();
+Hadi.renderEmployees();
+Hadi.renderEmployees();
 
-Management.prototype.renderEmployees.call(employees);
+
 
 
   
