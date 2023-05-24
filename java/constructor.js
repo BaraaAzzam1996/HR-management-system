@@ -42,26 +42,26 @@ let Safi =new Management(generateEmployeeId,"Safi Waleed","Administration","Mid-
  let omar=new Management(generateEmployeeId,"Omar Zaid","Development","Senior","path/to/omar.jpg",calculateSalary("Senior"));           
  let Rana=new Management(generateEmployeeId,"Rana Saleh","Development","Junior","path/to/rana.jpg",calculateSalary("Junior"));
  let Hadi=new Management(generateEmployeeId,"Hadi Ahmad","Finance","Mid-Senior","path/to/hadi.jpg",calculateSalary("Midsenior"));
- let employees = [Ghazi, Lana, Tamara, Safi, omar, Rana, Hadi];
- Management.prototype.renderEmployees=function()
-  {
-  let employeeList = "";
-  for (let i = 0; i < employees.length; i++) {
-    let employee = employees[i];
-    employeeList += "Employee name: " + employee.FullName + "<br>";
-    employeeList +="Departement:    "+employee.Departement+"<br>";
-    employeeList += "Employee salary: " + employee.Salary + "<br><br>";
-  }
-  document.getElementById("employee-list").innerHTML = employeeList;
-}
-Ghazi.renderEmployees();
-Lana.renderEmployees();
-Tamara.renderEmployees();
-Safi.renderEmployees();
-omar.renderEmployees();
-Rana.renderEmployees();
-Hadi.renderEmployees();
-Hadi.renderEmployees();
+
+
+  
+    let employees = [Ghazi, Lana, Tamara, Safi, omar, Rana, Hadi];
+    
+
+    Management.prototype.renderEmployees = function() {
+      let employeeList = "";
+    
+      employeeList += "Employee name: " + this.FullName + "<br>";
+      employeeList += "Department: " + this.Departement + "<br>";
+      employeeList += "Employee salary: " + this.Salary + "<br><br>";
+    
+      document.getElementById("employee-list").innerHTML += employeeList;
+    };
+    
+    for (let i = 0; i < employees.length; i++) {
+      employees[i].renderEmployees();
+    }
+
 
 
 
