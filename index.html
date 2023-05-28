@@ -7,13 +7,14 @@
     <title>Hr Management</title>
     <style>
          body {
+            
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         header{
-            background-color: #333;
-            color: white;
+            background-color: #704F4F;
+            color: #EDDFB3;
             padding: 20px;
         }
         header h1 { 
@@ -32,35 +33,62 @@
         
         header li a {
             text-decoration: none;
-            color:white;}
+            color:#EDDFB3;}
 
        
 
         main {
             padding: 20px;
         }
-        #employee-list {
-            color:#333;
-            font-weight: bold ;
-    
-    background-color: #8D7B68;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-  }
+       
         footer {
-            background-color: #f2f2f2;
+            background-color:#704F4F;
             padding: 20px;
             text-align: center;
             font-size: 14px;
+            color: #EDDFB3;
         }
 
         footer a {
-            color: #333;
+            color: #EDDFB3;
             text-decoration: none;
+            
         }
+        .card{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #867070;
+            background-color: #553939;
+            border-radius: 5px;
+            width: 200px;
+            padding: 15px;
+            margin :15px;
+            
+        }
+        .div1image{
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .content h1{
+            font-size: medium;
+            margin-bottom: 5px;
+            color: #E4D0D0;
+        }
+        .content h2 {font-size: medium;
+            margin-bottom: 5px;
+            color: #E4D0D0;
+        }
+        .content h3 {font-size: medium;
+            margin-bottom: 5px;
+            color: #E4D0D0;
+        }
+         main{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+}
+        
+        
    
     </style>
 </head>
@@ -74,8 +102,9 @@
 
     </header>
     <main>
-        <div id="employee-list"></div>
-        <script src="java/constructor.js"></script>
+        
+        
+        <script src="java/dom.js"></script>
 
     </main>
     <footer>
