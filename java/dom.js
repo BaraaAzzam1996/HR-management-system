@@ -58,7 +58,7 @@ function Management (id,name,departement,Level,img,salary){
       
     
          let divE=document.createElement("div");
-         Section.appendChild(divE)
+         
          main .appendChild(divE);
         divE.setAttribute("class", "card");
 
